@@ -14,8 +14,10 @@ O modelo baseia-se na documentação ofical do GCP com algumas adequações para
 ```sh
 kubectl apply -f \
 https://raw.githubusercontent.com/sre-team/kube-autoscale-example/master/deploy/kube-autoscale-hpa-example.yaml
-#
-kubectl get deploy,hpa
+```
+
+```sh
+kubectl get po,hpa
 ```
 
 Implementando o stress para o teste de hpa:
@@ -23,9 +25,9 @@ Implementando o stress para o teste de hpa:
 kubectl exec deploy/nginx -- sh -c 'apk add stress-ng'
 ```
 
-Neste exemplo a unica replica em execução receberá uma alocação de 1 core de CPU, 75% acima do limits configurado:
+Neste exemplo a unica replica em execução receberá uma alocação de aproximadamente 0.7 core de CPU, acima do limits configurado:
 ```sh
-kubectl exec deploy/nginx -- sh -c 'stress-ng --cpu 1'
+kubectl exec deploy/nginx -- sh -c 'stress-ng --cpu 0.7'
 ```
 
 Durante a execução verifique as metricas atuais de cpu e o hpa:
