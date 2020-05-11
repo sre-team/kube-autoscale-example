@@ -13,7 +13,8 @@ O modelo baseia-se na documentação ofical do GCP com algumas adequações para
 
 ```sh
 kubectl apply -f https://git.io/JflSi
-# URL Original: https://raw.githubusercontent.com/sre-team/kube-autoscale-example/master/deploy/kube-autoscale-hpa-example.yaml
+# URL Original: 
+# https://raw.githubusercontent.com/sre-team/kube-autoscale-example/master/deploy/kube-autoscale-hpa-example.yaml
 #
 kubectl get deploy,hpa
 ```
