@@ -12,9 +12,8 @@ Kubernetes auto-scale, exemplo rápido utilizando o stress-ng;
 O modelo baseia-se na documentação ofical do GCP com algumas adequações para simular rapidamente o stress nos recursos forçando scale;
 
 ```sh
-kubectl apply -f https://git.io/JflSi
-# URL Original: 
-# https://raw.githubusercontent.com/sre-team/kube-autoscale-example/master/deploy/kube-autoscale-hpa-example.yaml
+kubectl apply -f \
+https://raw.githubusercontent.com/sre-team/kube-autoscale-example/master/deploy/kube-autoscale-hpa-example.yaml
 #
 kubectl get deploy,hpa
 ```
