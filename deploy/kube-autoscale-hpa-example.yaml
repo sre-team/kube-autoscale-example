@@ -10,11 +10,6 @@ items:
     selector:
       matchLabels:
         app: nginx
-    strategy:
-      rollingUpdate:
-        maxSurge: 25%
-        maxUnavailable: 25%
-      type: RollingUpdate
     template:
       metadata:
         labels:
@@ -26,9 +21,6 @@ items:
         containers:
         - image: nginx:stable-alpine
           name: nginx
-          ports:
-          - containerPort: 80
-            protocol: TCP
           resources:
             requests:
               cpu: 250m
